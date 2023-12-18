@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles/mystyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="scripts/NavBar.js"></script>
+    <script src="scripts/Footer.js"></script>
+    <script src="scripts/index.js"></script>
+    <title>Momentum College Counseling</title>
+  </head>
+  <body>
+    <div id="overlay" onclick="exit()"></div>
+    <div class="main">
+      <header-nav id="contact-pg">
+        <a class="icon" onclick="openPhoneMenu()">
+          <i class="material-icons" style="font-size: 36px">menu</i>
+        </a>
+      </header-nav>
+      <div class="overlay-txt">
+        <h1>Contact Us</h1>
+      </div>
+      <div class="body-content">
+        <section class="about">
+          <p>
+            Looking to schedule a free consultation for more information? Fill
+            out the form and we will reach out to you to answer your questions!
+            Or give us a call during our open hours!
+          </p>
+        </section>
+        <form class="form" name="main-contact" onsubmit="return validateForm()">
+          <label hidden for="fname">Name</label>
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            placeholder="Name"
+            required
+          />
+          <div class="user-contact">
+            <label hidden for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+            <label hidden for="tel">Phone</label>
+            <input
+              type="tel"
+              id="tel"
+              name="phone"
+              placeholder="Phone Number"
+            />
+          </div>
+          <textarea
+            name="msg"
+            id="form-msg"
+            placeholder="Type your message here..."
+            required
+          >
+          </textarea>
+          <button type="submit" class="submit">Submit</button>
+        </form>
+        <div id="form-submitted">
+          <p>Form submitted! You will hear from us soon.</p>
+        </div>
+      </div>
+    </div>
+    <footer-large></footer-large>
+  </body>
+</html>
